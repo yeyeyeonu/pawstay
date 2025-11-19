@@ -1,0 +1,156 @@
+/* 기본 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+  /* 메인 컨테이너 */
+  .container {
+    width: 100%;
+    max-width: 375px;  /* iPhone 13 mini 기준 */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+
+.pick-card {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 20px;
+}
+
+.nav a {
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* 공통 번호 */
+.pick-num {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* 공통 이미지 박스 */
+.img-box {
+  width: 100%;          /* 가로 꽉 채우기 */
+  background: #d9d9d9;
+  border-radius: 0;
+}
+
+/* PICK 01*/
+.pick1-wrap {
+  position: relative;   /* 🔥 겹치기용 필수 */
+  width: 100%;
+}
+
+/* PICK 제목 2줄 */
+.pick-title-box {
+  position: absolute;
+  top: 20px;     /* 박스 왼쪽 위로 올림 */
+  left: 49px;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.1;
+  z-index: 3;
+}
+
+/* 번호 01 */
+.num01 {
+  position: absolute;
+  top: 200px;     /* 제목 아래로 */
+  left: 77px;
+  font-size: 48px;
+  font-weight: 600;
+  z-index: 3;
+}
+
+/* 박스 */
+.box1 {
+  display: block;
+  width: 230px;
+  height: 260px;
+  margin: 100px 0 0 auto;  /* 🔥 제목+번호를 피해서 아래 배치 */
+  background: #d9d9d9;
+}
+
+/* 상호명/위치 */
+.pick1 .pick-info {
+  margin-top: 10px; text-align: right;
+}
+
+
+
+/* PICK02 맞춤 */
+.num02 {
+  position: absolute;    
+  left: 48px;
+  font-size: 48px;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.box2 {
+  display: block;
+  width: 230px;
+  height: 260px;
+  margin: 100px 0 0 auto;  /* 🔥 제목+번호를 피해서 아래 배치 */
+  background: #d9d9d9;
+}
+
+.pick2 .pick-info {  
+  position: absolute;   
+  top: 220px; 
+  left: 60px;
+  z-index: 3; }
+
+
+
+
+  /* PICK03 맞춤 */
+  
+  .pick3 {
+    position: relative; /* 자식 absolute를 위한 기준점 */
+    padding-top: 80px;  /* 👉 여기로 공간 확보! */
+  }
+
+  .num03 {
+    margin:-30px 0 0 0;
+    position: absolute;    
+    right:0px;
+    font-size: 48px;
+    font-weight: 600;
+  }
+  
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    width: 340px;
+    margin: 20px auto;
+  }
+  
+  .grid-box {
+    width: 100%;
+    height: 140px;
+    background: #d9d9d9;
+    border-radius: 0px;
+  }
+  /* 상호명/위치 */
+.pick3 .pick-info {
+ text-align: right;
+}

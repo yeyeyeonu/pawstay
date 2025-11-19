@@ -6,7 +6,7 @@
   }
   
   body {
-    background: #e9e9e9;
+    background: #ffffff;
     font-family: 'Roboto', sans-serif;
   }
   
@@ -76,38 +76,64 @@
   }
   
   
-  /* 제목 스타일 */
-  .title {
-    font-size: 38px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    margin-left:0
-  }
-  
-  /* 공통 박스 설정 */
-  .img-box {
-    background: #d9d9d9;
-    border-radius: 0px;
-    margin-top:-10px;
-  }
-  
-  /* 큰 박스 (왼쪽) */
-  .big {
-    width: 174px;
-    height: 260px;
-    margin-left:-5px;
-    
-  }
-  
-  /* 작은 박스 (오른쪽) */
-  .small {
-    width: 158px;
-    height: 199px;
-    align-self: end; /* 오른쪽 박스를 아래에 맞춘 것처럼 보이게 */
-    margin-top: -10px; /* Figma에서 좌표 차이를 반영해서 아래로 내려준 부분 */
-    margin-left:-5px;
-  }
+  /* 섹션 전체 여백 */
+.falltrip {
+  margin-top: 40px;
+}
 
+/* 두 컬럼 그리드 */
+.falltrip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 두 칸 50:50 */
+  gap: 20px; /* 여백 */
+  align-items: start; /* 위로 정렬 */
+}
+
+/* 각 컬럼 */
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 제목 스타일 */
+.title {
+  font-size: 34px;      /* 모바일에서도 안 깨지게 조금 줄였음 */
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;     /* 줄 height 안정화 */
+}
+
+/* 공통 이미지 박스 */
+.img-box {
+  width: 100%;          /* 가로 꽉 채우기 */
+  background: #d9d9d9;
+  border-radius: 0;
+  overflow: hidden; 
+}
+
+/* 큰 박스 */
+.big {
+  height: 260px;
+}
+
+/* 작은 박스 */
+.small {
+  height: 199px;
+}
+
+.big-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.small-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center -10px; /* 필요에 따라 조절 */
+}
 
   
   /* ============= 우리는 뚜벅인데 ============= */
@@ -120,9 +146,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 34px;
-    font-weight: 600;
-    margin-left: 10px;
+    font-size: 33px;
+    font-weight: 700;
+    justify-content: center;
   }
 
   .img-box.wide {
@@ -133,7 +159,13 @@
     border-radius: 0px;
     margin: 0px auto 0;
   }
-  
+
+  .wide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center -60px;
+  }
 
   /* ============= 주변으로 / 순천향대 ============= */
 .box-wrapper {
@@ -146,7 +178,6 @@
 }
 
 .img-box.mid {
-
   display: block;
   width: 231px;
   height: 231px;
@@ -156,25 +187,32 @@
 
 }
 
+
 /* 1. '주변으로' (우측 상단) */
 .top {
   position: absolute;  
   margin-top: -120px;
   top: 100px;      /* 박스 위쪽 바깥으로 더 올림 */
-  left: 20px;        /* 오른쪽 라인에 맞춤 */
-  font-size: 38px; /* 제목급이라 조금 키움 */
+  left: 50px;        /* 오른쪽 라인에 맞춤 */
+  font-size: 34px; /* 제목급이라 조금 키움 */
   z-index: 2;           
   white-space: nowrap;
 }
 
 /* 2. '순천향대' (좌측 중앙) */
-/* 기존 .bottom 대신 .side 같은 클래스명을 추천하지만, 일단 bottom 자리에 적용합니다 */
 .bottom { 
   position: absolute;
   top: 40%;        /* 위에서 40% 지점으로 내림 */
   left: -60px;     /* 박스 왼쪽 바깥으로 뺌 (마이너스 값) */
   bottom: auto;    /* 기존 bottom 속성 초기화 */
-  font-size: 38px; /* 강조를 위해 폰트 크게 */
+  font-size: 34px; /* 강조를 위해 폰트 크게 */
   z-index: 2;           
   white-space: nowrap;
+}
+
+.mid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 0px;
 }
