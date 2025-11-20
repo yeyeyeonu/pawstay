@@ -1,0 +1,61 @@
+/* 전체 화면 컨테이너 */
+
+/* 기본 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+.cafe-container {
+    width: 375px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 90px 20px 40px;
+    min-height: 100vh;
+  }
+  
+  /* 타이틀 */
+  .cafe-title {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+  
+  /* 카드 1개 */
+  .cafe-card {
+    margin-bottom: 80px;
+  }
+  
+/* 이미지 박스 */
+.cafe-img {
+    width: 90%;
+    height: 220px;
+    background: #d9d9d9;
+    margin-bottom: 14px;
+  }
+  
+  /* 전체 텍스트 박스 */
+  .cafe-info {
+    line-height: 1.4;
+  }
+  
+  /* 상호명 (첫 줄) */
+  .cafe-info .name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  /* 주소 (둘째 줄) */
+  .cafe-info .addr {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+  }
+  
